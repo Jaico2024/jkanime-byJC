@@ -1,9 +1,9 @@
 {
   "sourceName": "JkAnime",
-  "iconUrl": "https://github.com/Jaico2024/jkanime-byJC/blob/main/jkanime.png?raw=true",
+  "iconUrl": "https://raw.githubusercontent.com/Jaico2024/jkanime-byJC/refs/heads/main/jkanime.png",
   "author": {
     "name": "Jaico",
-    "icon": "https://github.com/Jaico2024/jkanime-byJC/blob/main/jaico.png?raw=true"
+    "icon": "https://raw.githubusercontent.com/Jaico2024/jkanime-byJC/refs/heads/main/jaico.png"
   },
   "version": "1.0.0",
   "type": "anime",
