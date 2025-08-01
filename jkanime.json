@@ -1,0 +1,8 @@
+{
+  "name": "JkAnime",
+  "sourceName": "jkanime-byJC",
+  "baseUrl": "https://jkanime.net",
+  "searchBaseUrl": "https://jkanime.net/buscar/",
+  "scriptUrl": "https://raw.githubusercontent.com/Jaico2024/jkanime-byJC/main/jkanime.js",
+  "asyncJS": true
+}
