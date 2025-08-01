@@ -1,34 +1,24 @@
 function searchResults(query) {
-  const url = `https://jkanime.net/buscar/${query.toLowerCase().replace(/ /g, "-")}`;
-
-  const doc = fetchv2(url, {
+  const proxyUrl = `https://jkanime-proxy-production.up.railway.app/jkanime?q=${encodeURIComponent(query)}`;
+  const response = fetch(proxyUrl, {
     headers: {
-      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
-      "Referer": "https://jkanime.net/"
+      "Accept": "application/json"
     }
   });
 
-  const results = [];
-  const items = doc.select("div.anime__item");
+  const data = JSON.parse(response.text());
 
-  if (!items || items.length === 0) {
-    console.log("❌ No se encontraron resultados para:", query);
+  if (!data || data.length === 0) {
+    console.log("❌ No se encontraron resultados en el proxy.");
     return [];
   }
 
-  items.forEach((el) => {
-    const title = el.selectFirst("h5 > a")?.text() || "Sin título";
-    const animeUrl = el.selectFirst("h5 > a")?.attr("href");
-    const image = el.selectFirst(".anime__item__pic")?.attr("data-setbg");
-    if (title && animeUrl) {
-      results.push({
-        title,
-        url: animeUrl,
-        image
-      });
-    }
-  });
+  const results = data.map(item => ({
+    title: item.title,
+    url: item.url,
+    image: item.image
+  }));
 
-  console.log("✅ Resultados encontrados:", results.length);
+  console.log(`✅ Resultados cargados desde proxy: ${results.length}`);
   return results;
 }
