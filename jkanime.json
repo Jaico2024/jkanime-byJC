@@ -1,8 +1,18 @@
 {
-  "name": "JkAnime",
-  "sourceName": "jkanime-byJC",
-  "baseUrl": "https://jkanime.net",
-  "searchBaseUrl": "https://jkanime.net/buscar/",
+  "sourceName": "JkAnime",
+  "iconUrl": "https://github.com/Jaico2024/jkanime-byJC/blob/main/jkanime.png?raw=true",
+  "author": {
+    "name": "Jaico",
+    "icon": "https://github.com/Jaico2024/jkanime-byJC/blob/main/jaico.png?raw=true"
+  },
+  "version": "1.0.0",
+  "type": "anime",
+  "language": "Spanish (SUB)",
+  "streamType": "MP4",
+  "quality": "720p",
+  "baseUrl": "https://jkanime.net/",
+  "searchBaseUrl": "https://jkanime.net/buscar/%s",
   "scriptUrl": "https://raw.githubusercontent.com/Jaico2024/jkanime-byJC/main/jkanime.js",
-  "asyncJS": true
+  "asyncJS": true,
+  "streamAsyncJS": true
 }
